@@ -12,20 +12,20 @@
 }
 
 .intro {
-    /* Insert your changes */
-}
+   
+} 
 
 .level-1 {
-    /* Insert your changes */
 }
 
 .static {
-    /* Insert your changes */
+    background-image: url(resources/tv.png);
+    background-size: cover;
 }
 
 .move-cartridge {
-    /* Insert your changes */
-}
+
+} 
 
 #television {
     height: 350px;
@@ -38,6 +38,8 @@
     width: 300px;
     margin: 0 auto;
     margin-top: 40px;
+    background-image: url(resources/nes.png);
+    background-size: cover;
 }
 
 #nes-cartridge {
@@ -46,4 +48,7 @@
     width: 100px;
     left: 300px;
     bottom: 0px;
+    background-image: url(resources/contra-cartridge.png);
+    background-size: cover;
+    transform: skewX(-25deg);
 }
