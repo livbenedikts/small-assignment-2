@@ -1,6 +1,9 @@
 /* Here below you should make your changes */
 @keyframes static {
-    /* Insert your changes */
+    50% {background-image: url(resources/tv.png), linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
+    }
+    100% {background-image: url(resources/tv.png), linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%)}
+
 }
 
 @keyframes level-1 {
@@ -8,30 +11,50 @@
 }
 
 @keyframes move-cartridge {
-    /* Insert your changes */
+    33% {
+        bottom: 0px;
+        opacity: 1;
+    }
+    66% {
+        bottom: 150px;
+        opacity: 0.5;
+    }
+    100% {
+        bottom: 160px;
+        opacity: 0;
+    }
 }
 
 .intro {
+    /* kallar á keyframes */
    
 } 
+
 
 .level-1 {
 }
 
 .static {
-    background-image: url(resources/tv.png);
-    background-size: cover;
+    animation-name: static;
+    animation-duration: 2s;
+    animation-iteration-count: 1; 
 }
 
 .move-cartridge {
-
+    animation: move-cartridge 2s forwards linear;
 } 
 
 #television {
     height: 350px;
     width: 500px;
     margin: 0 auto;
+    background-image: url(resources/tv.png),linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
+    background-size: 500px 350px, 295px 300px;
+    background-position: 100%, 35% 50% ;
+    background-repeat: no-repeat;
+    
 }
+
 
 #nes-console {
     height: 200px;
@@ -50,5 +73,15 @@
     bottom: 0px;
     background-image: url(resources/contra-cartridge.png);
     background-size: cover;
-    transform: skewX(-25deg);
+    transform: rotateZ(45deg) rotateX(30deg);
 }
+
+
+/* COlOURS FOR TELE */
+/* /* from {background-color: #000000}; 
+    to {background-color: #0f0da9}; /
+    / 28.4% {background-color: #9a1018};
+    42.6% {background-color: #9d12ac};
+    56.8% {background-color: #54c735};
+    71% {background-color: #53c0b5};
+    100% {background-color: #b7bf3a}; */
