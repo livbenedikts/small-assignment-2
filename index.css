@@ -1,13 +1,22 @@
 /* Here below you should make your changes */
 @keyframes static {
-    50% {background-image: url(resources/tv.png), linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
+    0% {background-image: url(resources/tv.png), 
+        linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%)
+        ;background-size: 500px 350px, 295px 300px; background-position: 100%, 35% 50%;
     }
-    100% {background-image: url(resources/tv.png), linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%)}
+    100% {background-image: url(resources/tv.png), linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
+    background-size: 500px 350px, 295px 300px; background-position: 100%, 35% 50%;
+}
 
 }
 
 @keyframes level-1 {
-    /* Insert your changes */
+    from {background-image: linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
+    background-size: 295px 300px; background-position: 35% 50%; }
+    
+    to {background-image: url(resources/tv.png), url(resources/intro.png)
+    /* ;background-size: 500px 350px, 295px 300px; background-position: 100%, 35% 50%; */
+    }
 }
 
 @keyframes move-cartridge {
@@ -32,12 +41,13 @@
 
 
 .level-1 {
+    animation: level-1 linear;
+
 }
 
 .static {
-    animation-name: static;
-    animation-duration: 2s;
-    animation-iteration-count: 1; 
+    animation: static 2s forwards 2 alternate;
+
 }
 
 .move-cartridge {
@@ -48,12 +58,21 @@
     height: 350px;
     width: 500px;
     margin: 0 auto;
+    background-image: url(resources/tv.png);
+    background-size: 500px 350px;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
+/* #television {
+    height: 350px;
+    width: 500px;
+    margin: 0 auto;
     background-image: url(resources/tv.png),linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
     background-size: 500px 350px, 295px 300px;
     background-position: 100%, 35% 50% ;
     background-repeat: no-repeat;
-    
-}
+} */
 
 
 #nes-console {
