@@ -6,39 +6,24 @@
     }
     100% {background-image: url(resources/tv.png), linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
     background-size: 500px 350px, 295px 300px; background-position: 100%, 35% 50%;
-}
+    }
 
 }
 
 @keyframes intro {    
     100% {background-image: url(resources/tv.png), url(resources/intro.png);
-        background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%;
+        background-size: 500px 350px, 360px 300px; background-position: 10%, 25% 50%;
     }
 }
-
 
 @keyframes level-1 {
-    0% {background-image: url(resources/tv.png), url(resources/stage1.png) repeat-x;
-       /* background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%; */
-       transform: translate3d(0, 0, 0), translate3d(0, 0, 0);
+    0% {background-image: url(resources/tv.png), url(resources/stage1.png);
+        background-size: 500px 350px, 6000px 280px; background-position: 100% , 0% 20%;
     }
-    100% {background-image: url(resources/tv.png), url(resources/stage1.png) repeat-x;
-        /* background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%; */
-        transform: translate3d(0, 0, 0),translate3d(-300px, 0, 0);
+    100% {background-image: url(resources/tv.png), url(resources/stage1.png);
+        background-size: 500px 350px, 6000px 280px; background-position: 100%, 100% 20%;
     }
 }
-
-@keyframes level-13 {
-    from { background-image: url(resources/stage1.png);
-       background-size: 360px 300px; background-position: 25% 50%;
-       transform: translate3d(0, 0, 0) translate3d(0, 0, 0);
-    }
-    to {background-image:  url(resources/stage1.png); left: -100%;
-        background-size: 360px 300px; background-position: 25% 50%;
-        transform: translate3d(0, 0, 0) translate3d(-300px, 0, 0);
-    }
-}
-
 
 
 @keyframes move-cartridge {
@@ -62,13 +47,8 @@
 
 
 .level-1 {
-    /* height: 300px;
-    width: 360px; */
-    /* left: 0;
-    height: 360px;
-    width: 900px; */
-    animation: level-1 8s forwards linear;
-    /* animation: level-1 3s linear 1s infinite running;  */
+    animation: level-1 20s forwards linear;
+
 
 
 }
@@ -89,20 +69,10 @@
     margin: 0 auto;
     overflow: hidden;
     background-image: url(resources/tv.png);
-    background-size: 500px 350px;
+    background-size: 510px 350px;
     background-position: 100%;
     background-repeat: no-repeat;
 }
-
-/* #television {
-    height: 350px;
-    width: 500px;
-    margin: 0 auto;
-    background-image: url(resources/tv.png),linear-gradient(to right,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
-    background-size: 500px 350px, 295px 300px;
-    background-position: 100%, 35% 50% ;
-    background-repeat: no-repeat;
-} */
 
 
 #nes-console {
