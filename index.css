@@ -10,14 +10,36 @@
 
 }
 
-@keyframes level-1 {
-    from {background-image: linear-gradient(to left,yellow 14% , cyan 14% 28% , green 28% 42.6% , magenta 42.6% 56%, red 56% 70%, darkblue 70% 84%, black 84% 100%);
-    background-size: 295px 300px; background-position: 35% 50%; }
-    
-    to {background-image: url(resources/tv.png), url(resources/intro.png)
-    /* ;background-size: 500px 350px, 295px 300px; background-position: 100%, 35% 50%; */
+@keyframes intro {    
+    100% {background-image: url(resources/tv.png), url(resources/intro.png);
+        background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%;
     }
 }
+
+
+@keyframes level-1 {
+    0% {background-image: url(resources/tv.png), url(resources/stage1.png) repeat-x;
+       /* background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%; */
+       transform: translate3d(0, 0, 0), translate3d(0, 0, 0);
+    }
+    100% {background-image: url(resources/tv.png), url(resources/stage1.png) repeat-x;
+        /* background-size: 500px 350px, 360px 300px; background-position: 100%, 25% 50%; */
+        transform: translate3d(0, 0, 0),translate3d(-300px, 0, 0);
+    }
+}
+
+@keyframes level-13 {
+    from { background-image: url(resources/stage1.png);
+       background-size: 360px 300px; background-position: 25% 50%;
+       transform: translate3d(0, 0, 0) translate3d(0, 0, 0);
+    }
+    to {background-image:  url(resources/stage1.png); left: -100%;
+        background-size: 360px 300px; background-position: 25% 50%;
+        transform: translate3d(0, 0, 0) translate3d(-300px, 0, 0);
+    }
+}
+
+
 
 @keyframes move-cartridge {
     33% {
@@ -35,20 +57,27 @@
 }
 
 .intro {
-    /* kallar á keyframes */
-   
+    animation: intro -2s 1s forwards;
 } 
 
 
 .level-1 {
-    animation: level-1 linear;
+    /* height: 300px;
+    width: 360px; */
+    /* left: 0;
+    height: 360px;
+    width: 900px; */
+    animation: level-1 8s forwards linear;
+    /* animation: level-1 3s linear 1s infinite running;  */
+
 
 }
 
 .static {
-    animation: static 2s forwards 2 alternate;
+    animation: static 2s forwards 2 alternate linear;
 
 }
+
 
 .move-cartridge {
     animation: move-cartridge 2s forwards linear;
@@ -58,6 +87,7 @@
     height: 350px;
     width: 500px;
     margin: 0 auto;
+    overflow: hidden;
     background-image: url(resources/tv.png);
     background-size: 500px 350px;
     background-position: 100%;
@@ -95,12 +125,3 @@
     transform: rotateZ(45deg) rotateX(30deg);
 }
 
-
-/* COlOURS FOR TELE */
-/* /* from {background-color: #000000}; 
-    to {background-color: #0f0da9}; /
-    / 28.4% {background-color: #9a1018};
-    42.6% {background-color: #9d12ac};
-    56.8% {background-color: #54c735};
-    71% {background-color: #53c0b5};
-    100% {background-color: #b7bf3a}; */
